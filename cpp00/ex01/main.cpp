@@ -114,12 +114,14 @@ int main()
 	while(true)
 	{
 		std::cout << "Input command: ";
-		getline(std::cin, input);
-		if (input == "EXIT")
-			return 0;
-		else if (input == "ADD")
-			add_new_contact(contacts);
-		else if (input == "SEARCH")
-			search_contacts(contacts);
+		if (getline(std::cin, input))
+		{
+			if (input == "EXIT")
+				return 0;
+			else if (input == "ADD")
+				add_new_contact(contacts);
+			else if (input == "SEARCH")
+				search_contacts(contacts);
+		}
 	}
 }

@@ -2,8 +2,8 @@
 
 int main(int argc, char **argv)
 {
-    int args;
-    char *argument;
+    int		args;
+    char	*argument;
 
     args = 1;
     if (argc < 2)
