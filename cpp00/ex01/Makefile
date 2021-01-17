@@ -1,6 +1,6 @@
 NAME = phonebook 
 SRC = main.cpp \
-	imp.cpp
+	phonebook.cpp
 OBJ = $(SRC:.cpp=.o)
 FLAGS = -Wall -Werror -Wextra
 

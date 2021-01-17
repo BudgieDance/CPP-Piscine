@@ -34,17 +34,7 @@ void display_desired_contact(Contact *contacts)
 	}
 	index--;
 	std::cin.ignore();
-	std::cout << "first name = " << contacts[index].first_name << std::endl;
-	std::cout << "last name = " << contacts[index].last_name << std::endl;
-	std::cout << "nickname = " << contacts[index].nickname << std::endl;
-	std::cout << "login = " << contacts[index].login << std::endl;
-	std::cout << "postal address = " << contacts[index].postal_addr << std::endl;
-	std::cout << "email address = " << contacts[index].email_addr << std::endl;
-	std::cout << "phone number = " << contacts[index].phone_number << std::endl;
-	std::cout << "birthday = " << contacts[index].birthday << std::endl;
-	std::cout << "favorite meal = " << contacts[index].fav_meal << std::endl;
-	std::cout << "underwear color = " << contacts[index].color << std::endl;
-	std::cout << "darkest secret = " << contacts[index].secret << std::endl;
+	contacts[index].print_params();
 }
 
 void search_contacts(Contact *contacts)
@@ -60,9 +50,9 @@ void search_contacts(Contact *contacts)
 	while (index < Contact::get_cont())
 	{
 		print_index(index + 1);
-		print_string(contacts[index].first_name);
-		print_string(contacts[index].last_name);
-		print_string(contacts[index].nickname);
+		print_string(contacts[index].get_first_name());
+		print_string(contacts[index].get_last_name());
+		print_string(contacts[index].get_nickname());
 		std::cout << std::endl;
 		index++;
 	}
@@ -75,33 +65,12 @@ void add_new_contact(Contact *contacts)
 	Contact new_cont;
 	int i = Contact::get_cont();
 
-	if (i > 9)
+	if (i > 7)
 	{
 		std::cout << "The phonebook is full :(" << std::endl;
 		return ;
 	}
-	std::cout << "Enter first name: ";
-	getline(std::cin, new_cont.first_name);
-	std::cout << "Enter last name: ";
-	getline(std::cin, new_cont.last_name);
-	std::cout << "Enter nickname: ";
-	getline(std::cin, new_cont.nickname);
-	std::cout << "Enter login: ";
-	getline(std::cin, new_cont.login);
-	std::cout << "Enter postal address: ";
-	getline(std::cin, new_cont.postal_addr);
-	std::cout << "Enter email address: ";
-	getline(std::cin, new_cont.email_addr);
-	std::cout << "Enter phone number: ";
-	getline(std::cin, new_cont.phone_number);
-	std::cout << "Enter birthday date: ";
-	getline(std::cin, new_cont.birthday);
-	std::cout << "Enter favorite meal: ";
-	getline(std::cin, new_cont.fav_meal);
-	std::cout << "Enter underwear color: ";
-	getline(std::cin, new_cont.color);
-	std::cout << "Enter darkest secret: ";
-	getline(std::cin, new_cont.secret);
+	new_cont.set_params();
 	contacts[i] = new_cont;
 	Contact::increment();
 }
@@ -109,7 +78,7 @@ void add_new_contact(Contact *contacts)
 int main()
 {
 	std::string input;
-	Contact contacts[10];
+	Contact contacts[8];
 
 	while(true)
 	{
@@ -122,6 +91,8 @@ int main()
 				add_new_contact(contacts);
 			else if (input == "SEARCH")
 				search_contacts(contacts);
+			else
+				std::cout << "Please provide a valid command(choose from: ADD, SEARCH, and EXIT)" << std::endl;
 		}
 	}
 }
