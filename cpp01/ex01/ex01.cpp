@@ -8,8 +8,3 @@ void    memoryLeak()
     std::cout << *panther << std::endl;
     delete panther;
 }
-
-int main(){
-    memoryLeak();
-    return 0;
-}

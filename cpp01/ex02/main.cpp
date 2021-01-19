@@ -5,7 +5,7 @@ int main(){
     ZombieEvent event1;
     Zombie      *zombie1;
 
-    std::srand(std::time(nullptr));
+    std::srand(std::time(NULL));
     std::cout << std::endl << "Creating a zombie with 'newZombie' method" << std::endl;
     event1.setZombieType("type1");
     zombie1 = event1.newZombie("Johny");
@@ -14,7 +14,6 @@ int main(){
 
     std::cout << std::endl << "Creating a zombie with 'randomChump' method" << std::endl;
     event1.setZombieType("type2");
-    zombie1 = event1.randomChump();
-    delete zombie1;
+    event1.randomChump();
     return 0;
 }

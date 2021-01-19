@@ -1,10 +1,8 @@
 #include "Human.hpp"
 
-Human::Human(){
-}
+Human::Human(void){}
 
-Human::~Human(){
-}
+Human::~Human(void){}
 
 std::string Human::identify() const{
     std::string addr;
@@ -13,6 +11,6 @@ std::string Human::identify() const{
     return addr;
 }
 
-const Brain &Human::getBrain(){
+Brain const &Human::getBrain() const{
    return this->_brain; 
 }

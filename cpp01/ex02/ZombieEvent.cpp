@@ -11,11 +11,9 @@ Zombie  *ZombieEvent::newZombie(std::string name){
     return zombie_ptr;
 }
 
-Zombie  *ZombieEvent::randomChump(){
-    Zombie *zombie_ptr;
+void  ZombieEvent::randomChump(){
     std::string random_names[] = {"James", "Lars", "Kirk", "Jason", "Cliff", "Robert"};
+    Zombie zombie(this->_type, random_names[std::rand() % 6]);
 
-    zombie_ptr = new Zombie(this->_type, random_names[std::rand() % 6]);
-    zombie_ptr->announce();
-    return zombie_ptr;
+    zombie.announce();
 }

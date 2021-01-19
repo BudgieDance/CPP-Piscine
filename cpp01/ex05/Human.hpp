@@ -5,13 +5,13 @@
 
 class Human{
     private:
-        const Brain   _brain;
+        Brain const   _brain;
     
     public:
-        Human();
-        ~Human();
+        Human(void);
+        ~Human(void);
         std::string identify() const;
-        const Brain &getBrain();
+        Brain const &getBrain() const;
 
 };
 
