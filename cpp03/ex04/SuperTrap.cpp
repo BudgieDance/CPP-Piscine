@@ -15,10 +15,9 @@ SuperTrap::SuperTrap(void){
     this->_armor = 5;
 }
 
-SuperTrap::SuperTrap(std::string name){
+SuperTrap::SuperTrap(std::string name) : ClapTrap(), NinjaTrap(name), FragTrap(name){
     this->_name = name;
     std::cout << "SUPER-TP named " + this->_name + " was just created!!" << std::endl;
-
     this->_hit_points = 100;
     this->_max_hit_points = 100;
     this->_energy_points = 120;
@@ -36,6 +35,14 @@ SuperTrap::SuperTrap(SuperTrap const &src){
 
 SuperTrap::~SuperTrap(void){
     std::cout << "SUPER-TP named " + this->_name + " just exploded. BYE BYE!!" << std::endl;
+}
+
+void SuperTrap::rangedAttack(std::string const &target){
+    FragTrap::rangedAttack(target);
+}
+
+void SuperTrap::meleeAttack(std::string const &target){
+    NinjaTrap::meleeAttack(target);
 }
 
 /*OVERLOADS*/

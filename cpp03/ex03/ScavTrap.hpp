@@ -12,6 +12,8 @@ class ScavTrap : public ClapTrap{
         ~ScavTrap(void);
 
         ScavTrap &operator=(ScavTrap const &src);
+        void rangedAttack(std::string const &target);
+        void meleeAttack(std::string const &target);
         void challengeNewcomer(void);
 };
 

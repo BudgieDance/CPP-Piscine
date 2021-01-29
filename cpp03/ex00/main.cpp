@@ -23,5 +23,6 @@ int main(){
     trap2.vaulthunter_dot_exe("Target1");
     trap2.vaulthunter_dot_exe("Target1");
 
+    std::cout << std::endl << std::endl << "-------DESTRUCTORS-------" << std::endl;
     return 0;
 }

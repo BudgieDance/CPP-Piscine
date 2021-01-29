@@ -54,6 +54,14 @@ NinjaTrap &NinjaTrap::operator=(NinjaTrap const &src){
 
 /*ACTION FUNCTIONS*/
 
+void NinjaTrap::rangedAttack(std::string const &target){
+    std::cout << "NINJ4-TP " + this->_name + " attacks " + target + " at range, causing " << this->_ranged_dmg << " points of damage" << std::endl;
+}
+
+void NinjaTrap::meleeAttack(std::string const &target){
+    std::cout << "NINJ4-TP " + this->_name + " attacks " + target + " at melee, causing " << this->_melee_dmg << " points of damage" << std::endl;
+}
+
 void NinjaTrap::ninjaShoebox(ClapTrap const &trap){
     if (this->_energy_points < 25)
         std::cout << "OH SHIT!! " << this->_name << " doesn't have enough energy" << std::endl;

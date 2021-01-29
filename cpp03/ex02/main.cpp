@@ -43,5 +43,6 @@ int main(){
     trap3.challengeNewcomer();
     trap3.challengeNewcomer();
 
+    std::cout << std::endl << std::endl << "-------DESTRUCTORS-------" << std::endl;
     return 0;
 }

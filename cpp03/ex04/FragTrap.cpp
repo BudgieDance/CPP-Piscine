@@ -54,6 +54,14 @@ FragTrap &FragTrap::operator=(FragTrap const &src){
 
 /*ACTION FUNCTIONS*/
 
+void FragTrap::rangedAttack(std::string const &target){
+    std::cout << "FR4G-TP " + this->_name + " attacks " + target + " at range, causing " << this->_ranged_dmg << " points of damage" << std::endl;
+}
+
+void FragTrap::meleeAttack(std::string const &target){
+    std::cout << "FR4G-TP " + this->_name + " attacks " + target + " at melee, causing " << this->_melee_dmg << " points of damage" << std::endl;
+}
+
 void FragTrap::vaulthunter_dot_exe(std::string const &target){
     std::string attack[5] = {"armaturoy po sheye", "noj v spinu", "pinok pod zad", "s vertuhi po golove", "odin progib i ti pogib"};
     if (this->_energy_points < 25)

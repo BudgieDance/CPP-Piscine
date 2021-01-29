@@ -70,5 +70,7 @@ int main(){
     trap4.ninjaShoebox(trap3);
     trap4.ninjaShoebox(trap5);
     trap4.ninjaShoebox(trap6);
+
+    std::cout << std::endl << std::endl << "-------DESTRUCTORS-------" << std::endl;
     return 0;
 }

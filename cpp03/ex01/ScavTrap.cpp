@@ -54,11 +54,11 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &src){
 /*ACTION FUNCTIONS*/
 
 void ScavTrap::rangedAttack(std::string const &target){
-    std::cout << this->_name + " attacks " + target + " at range, causing " << this->_ranged_dmg << " points of damage" << std::endl;
+    std::cout << "SC4V-TP " + this->_name + " attacks " + target + " at range, causing " << this->_ranged_dmg << " points of damage" << std::endl;
 }
 
 void ScavTrap::meleeAttack(std::string const &target){
-    std::cout << this->_name + " attacks " + target + " at melee, causing " << this->_melee_dmg << " points of damage" << std::endl;
+    std::cout << "SC4V-TP " + this->_name + " attacks " + target + " at melee, causing " << this->_melee_dmg << " points of damage" << std::endl;
 }
 
 void ScavTrap::takeDamage(unsigned int amount){

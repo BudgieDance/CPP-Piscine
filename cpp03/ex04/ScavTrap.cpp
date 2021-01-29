@@ -54,6 +54,14 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &src){
 
 /*ACTION FUNCTIONS*/
 
+void ScavTrap::rangedAttack(std::string const &target){
+    std::cout << "SC4V-TP " + this->_name + " attacks " + target + " at range, causing " << this->_ranged_dmg << " points of damage" << std::endl;
+}
+
+void ScavTrap::meleeAttack(std::string const &target){
+    std::cout << "SC4V-TP " + this->_name + " attacks " + target + " at melee, causing " << this->_melee_dmg << " points of damage" << std::endl;
+}
+
 void ScavTrap::challengeNewcomer(void){
     std::string challenge[5] = {"do a backflip", "bang your head against a wall", "take 10 shots of vodka", "make a burrito", "jump out the window"};
     if (this->_energy_points < 25)

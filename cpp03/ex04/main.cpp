@@ -96,5 +96,6 @@ int main(){
     super.ninjaShoebox(trap5);
     super.ninjaShoebox(trap6);
 
+    std::cout << std::endl << std::endl << "-------DESTRUCTORS-------" << std::endl;
     return 0;
 }

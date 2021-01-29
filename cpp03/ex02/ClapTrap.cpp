@@ -42,11 +42,11 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &src){
 /*ACTION FUNCTIONS*/
 
 void ClapTrap::rangedAttack(std::string const &target){
-    std::cout << this->_name + " attacks " + target + " at range, causing " << this->_ranged_dmg << " points of damage" << std::endl;
+    std::cout << "CL4P-TP " + this->_name + " attacks " + target + " at range, causing " << this->_ranged_dmg << " points of damage" << std::endl;
 }
 
 void ClapTrap::meleeAttack(std::string const &target){
-    std::cout << this->_name + " attacks " + target + " at melee, causing " << this->_melee_dmg << " points of damage" << std::endl;
+    std::cout << "CL4P-TP " + this->_name + " attacks " + target + " at melee, causing " << this->_melee_dmg << " points of damage" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount){
