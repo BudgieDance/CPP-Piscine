@@ -19,7 +19,7 @@ void Ice::use(ICharacter& target){
 }
 
 /*OVERLOADS*/
-Ice& Ice::operator=(AMateria const &src){
-    this->_xp = src.getXP();
+Ice& Ice::operator=(Ice const &src){
+    AMateria::operator=(src);
     return *this;
 }

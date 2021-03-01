@@ -19,7 +19,7 @@ void Cure::use(ICharacter& target){
 }
 
 /*OVERLOADS*/
-Cure& Cure::operator=(AMateria const &src){
-    this->_xp = src.getXP();
+Cure& Cure::operator=(Cure const &src){
+    AMateria::operator=(src);
     return *this;
 }

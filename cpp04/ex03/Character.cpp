@@ -13,6 +13,7 @@ Character::Character(std::string name) : _name(name), _inventoryMax(4){
 
 Character::Character(Character const &src){
     int index = 0;
+    this->_inventoryMax = 4;
     while (index < this->_inventoryMax){
         this->_inventory[index] = NULL;
         index++;

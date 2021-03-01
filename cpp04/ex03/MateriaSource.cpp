@@ -12,6 +12,7 @@ MateriaSource::MateriaSource() : _inventoryMax(4){
 
 MateriaSource::MateriaSource(MateriaSource const &src){
     int index = 0;
+    this->_inventoryMax = 4;
     while (index < this->_inventoryMax)
     {
         this->_inventory[index] = NULL;

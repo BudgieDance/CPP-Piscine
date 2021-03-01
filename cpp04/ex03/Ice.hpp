@@ -13,7 +13,7 @@ class Ice : public AMateria{
         virtual AMateria* clone() const;
         virtual void use(ICharacter& target);
 
-        Ice& operator=(AMateria const &src);
+        Ice& operator=(Ice const &src);
 };
 
 #endif
