@@ -16,7 +16,7 @@ class Cat : public Victim{
         virtual ~Cat(void);
 
         Cat &operator=(Cat const &src);
-
+        virtual std::string getGreeting(void) const;
         virtual void getPolymorphed(void) const;
 };
 

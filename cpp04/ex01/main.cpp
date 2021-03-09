@@ -5,6 +5,8 @@
 #include "RadScorpion.hpp"
 #include "Enemy.hpp"
 #include "SuperMutant.hpp"
+#include "Tarakan.hpp"
+#include "Grenade.hpp"
 
 int main()
 {
@@ -32,8 +34,10 @@ int main()
 
     // Enemy* b = new RadScorpion();
     // Enemy* c = new SuperMutant();
+    // Enemy* d = new Tarakan();
     // AWeapon* pr = new PlasmaRifle();
     // AWeapon* pf = new PowerFist();
+    // AWeapon* pg = new Grenade();
 
 
     // std::cout << "-------EMPTY ATTACKS-------" << std::endl;  
@@ -41,6 +45,12 @@ int main()
     // std::cout << *me;
     // me->attack(NULL);
     // std::cout << "-------ATTACKS-------" << std::endl;  
+    // me->equip(pg);
+    // std::cout << *me << std::endl;
+    // me->attack(d);
+    // std::cout << *me << std::endl;
+    // me->attack(d);
+    // std::cout << *me << std::endl;
     // me->equip(pr);
     // std::cout << *me << std::endl;
     // me->attack(b);
@@ -87,8 +97,10 @@ int main()
 
     // delete(pf);
     // delete(pr);
+    // delete(pg);
     // delete(b);
     // delete(c);
+    // delete(d);
     // delete(me);
     return 0;
 }

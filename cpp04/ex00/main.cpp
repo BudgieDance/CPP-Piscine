@@ -20,6 +20,8 @@ int main()
     Cat *cat1 = new Cat("Kittie");
     //Victim *cat1 = new Cat("Kittie");
 
+    std::cout << std::endl << cat << *cat1 << std::endl;
+
     robert.polymorph(cat);
     robert.polymorph(*cat1);
     std::cout << std::endl << std::endl << "DESTRUCTORS" << std::endl;

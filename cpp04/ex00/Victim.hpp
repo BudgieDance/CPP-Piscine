@@ -16,6 +16,7 @@ class Victim{
         virtual ~Victim(void);
 
         std::string getName(void) const;
+        virtual std::string getGreeting(void) const;
         Victim &operator=(Victim const &src);
 
         virtual void getPolymorphed(void) const;

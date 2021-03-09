@@ -23,8 +23,13 @@ Cat &Cat::operator=(Cat const &src){
     return *this;
 }
 
+std::string Cat::getGreeting(void) const{
+    std::string greet = "I am " + this->_name + " and I like to meooow!";
+    return greet;
+}
+
 std::ostream &operator<<(std::ostream &os, Cat const &src){
-    os << "I am " + src.getName() + " and I like to meow!" << std::endl;
+    os << src.getGreeting() << std::endl;
     return os;
 }
 

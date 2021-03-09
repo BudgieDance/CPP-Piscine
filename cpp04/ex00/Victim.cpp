@@ -23,6 +23,11 @@ std::string Victim::getName(void) const{
     return this->_name;
 }
 
+std::string Victim::getGreeting(void) const{
+    std::string greet = "I am " + this->_name + " and I like otters!";
+    return greet;
+}
+
 /*Overloads*/
 
 Victim &Victim::operator=(Victim const &src){
@@ -31,7 +36,7 @@ Victim &Victim::operator=(Victim const &src){
 }
 
 std::ostream &operator<<(std::ostream &os, Victim const &src){
-    os << "I am " + src.getName() + " and I like otters!" << std::endl;
+    os << src.getGreeting() << std::endl;
     return os;
 }
 

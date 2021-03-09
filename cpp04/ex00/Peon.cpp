@@ -23,8 +23,13 @@ Peon &Peon::operator=(Peon const &src){
     return *this;
 }
 
+std::string Peon::getGreeting(void) const{
+    std::string greet = "I am " + this->_name + " and I am a child class to Victim";
+    return greet;
+}
+
 std::ostream &operator<<(std::ostream &os, Peon const &src){
-    os << "I am " + src.getName() + " and I like otters!" << std::endl;
+    os << src.getGreeting() << std::endl;
     return os;
 }
 

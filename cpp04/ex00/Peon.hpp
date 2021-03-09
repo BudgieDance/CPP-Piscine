@@ -16,7 +16,7 @@ class Peon : public Victim{
         virtual ~Peon(void);
 
         Peon &operator=(Peon const &src);
-
+        virtual std::string getGreeting(void) const;
         virtual void getPolymorphed(void) const;
 };
 
