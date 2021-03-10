@@ -43,7 +43,10 @@ void Convert::fromFloat(){
     }
     catch(std::exception& ex){
         this->_range = true;
+        return;
     }
+    if (this->_float > static_cast<float>(INT_MAX) || this->_float < static_cast<float>(INT_MIN))
+        this->_impossible = true;
 }
 
 void Convert::fromDouble(){
@@ -55,7 +58,10 @@ void Convert::fromDouble(){
     }
     catch(std::exception& ex){
         this->_range = true;
+        return;
     }
+    if (this->_double > static_cast<double>(INT_MAX) || this->_double < static_cast<double>(INT_MIN))
+        this->_impossible = true;
 }
 
 void Convert::convert_all(){
@@ -152,19 +158,6 @@ float Convert::getFloat() const{
 
 double Convert::getDouble() const{
     return this->_double;
-}
-
-void Convert::convert_all2(){
-    if (getType() == 0)
-        std::cout << "char" << std::endl;
-    else if (getType() == 1)
-        std::cout << "int" << std::endl;
-    else if (getType() == 2)
-        std::cout << "float" << std::endl;
-    else if (getType() == 3)
-        std::cout << "double" << std::endl;
-    else
-        std::cout << "error" << std::endl;
 }
 
 /*OVERLOADS*/

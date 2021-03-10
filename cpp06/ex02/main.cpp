@@ -50,21 +50,21 @@ void identify_from_reference(Base& base){
         (void)a;
         std::cout << "A" << std::endl;
     }
-    catch(std::bad_cast& ex){}
+    catch(std::exception& ex){}
 
     try{
         B& b = dynamic_cast<B&>(base);
         (void)b;
         std::cout << "B" << std::endl;
     }
-    catch(std::bad_cast& ex){}
+    catch(std::exception& ex){}
 
     try{
         C& c = dynamic_cast<C&>(base);
         (void)c;
         std::cout << "C" << std::endl;
     }
-    catch(std::bad_cast& ex){}
+    catch(std::exception& ex){}
 }
 
 int main(){
