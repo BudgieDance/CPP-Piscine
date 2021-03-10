@@ -13,10 +13,10 @@ class Array{
         unsigned int _arrSize;
 
     public:
-        Array();
-        Array(unsigned int const n);
-        Array(Array<T> const& src);
-        ~Array();
+        Array<T>();
+        Array<T>(unsigned int const n);
+        Array<T>(Array<T> const& src);
+        ~Array<T>();
 
         unsigned int size() const;
         Array<T>& operator=(Array<T> const& src);

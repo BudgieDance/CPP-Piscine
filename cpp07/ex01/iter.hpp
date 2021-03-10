@@ -5,12 +5,12 @@
 #include <string>
 
 template<typename T>
-void print_out(T& elem){
+void print_out(T const & elem){
     std::cout << elem << " ";
 }
 
 template<typename T>
-void iter(T* ptr, const int& len, void (*func)(T& elem)){
+void iter(T* ptr, int len, void (*func)(T const & elem)){
     int i = 0;
 
     while (i < len){

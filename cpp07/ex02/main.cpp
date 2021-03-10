@@ -63,5 +63,4 @@ int main(){
         std::cout << "invalid index" << std::endl;
     }
     return 0;
-    
 }
