@@ -39,11 +39,11 @@ std::string get_tree(){
 
 /*ACTION*/
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const{
-    if (executor.getGrade() > this->getGradeToExec())
-        throw Form::GradeTooLowToExecException();
     if (!(this->getIsSigned()))
         throw Form::FormNotSignedException();
-    std::string fileName = (this->getTarget() + "_" + executor.getName() + "_shrubbery");
+    if (executor.getGrade() > this->getGradeToExec())
+        throw Form::GradeTooLowToExecException();
+    std::string fileName = (this->getTarget() + "_shrubbery");
     std::ofstream out_file;
     out_file.open(&fileName[0]);
     out_file << get_tree();

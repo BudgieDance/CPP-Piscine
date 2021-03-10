@@ -40,10 +40,14 @@ void Bureaucrat::signForm(Form &src){
 }
 
 void Bureaucrat::executeForm(Form &src){
-    if (!(src.getIsSigned()))
-        throw Form::FormNotSignedException();
-    if (this->_grade > src.getGradeToExec())
-        throw Form::GradeTooLowToExecException();
+    if (!(src.getIsSigned())){
+        std::cout << this->_name << " cannot execute " << src.getName() << " because the form is not signed" << std::endl;
+        return ;
+    }
+    if (this->_grade > src.getGradeToExec()){
+        std::cout << this->_name << " cannot execute " << src.getName() << " because " << this->_name << "'s grade is too low" << std::endl;
+        return ;
+    }
     std::cout << this->_name << " executes " << src.getName() << std::endl;
     src.execute(*this);
 }

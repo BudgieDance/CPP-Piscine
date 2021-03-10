@@ -15,10 +15,6 @@ class Intern{
         Intern(Intern const &src);
         ~Intern();
 
-        class unknownFormException : public std::exception{
-            public:
-                virtual const char* what() const throw();
-        };
         Form* makeForm(std::string const name, std::string const target);
         Intern& operator=(Intern const &src);
 };

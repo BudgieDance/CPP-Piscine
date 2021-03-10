@@ -17,11 +17,11 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const &s
 
 /*ACTION*/
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const{
-    if (executor.getGrade() > this->getGradeToExec())
-        throw Form::GradeTooLowToExecException();
     if (!(this->getIsSigned()))
         throw Form::FormNotSignedException();
-    if ((std::rand() % 100) >= 50)
+    if (executor.getGrade() > this->getGradeToExec())
+        throw Form::GradeTooLowToExecException();
+    if ((std::rand() % 2) == 1)
         std::cout << "Success!! " << this->getTarget() << " has been robotomized!" << std::endl;
     else
         std::cout << "Failure! " << this->getTarget() << " wasn't robotomized!" << std::endl; 

@@ -9,11 +9,7 @@ int main()
     Intern someInter;
     Form* f1;
 
-    try{
-        f1 = someInter.makeForm("robotomes request", "Bender");
-        std::cout << "SUCCESS" << std::endl;
-    }
-    catch(std::exception& ex){
-        std::cout << ex.what() << std::endl;
-    }
+    f1 = someInter.makeForm("robotomes request", "Bender");
+    f1 = someInter.makeForm("robotomy request", "Bender");
+    std::cout << *f1 << std::endl;
 }

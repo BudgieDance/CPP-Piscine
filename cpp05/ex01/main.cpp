@@ -9,23 +9,15 @@ int main()
 
 
     std::cout << "BUREAUCRATS TRYING TO SIGN" << std::endl;
-    try{
-        std::cout << f1 << std::endl;
-        b1.signForm(f1);
-        std::cout << f1 << std::endl;
-    }
-    catch(std::exception& ex){
-        std::cout << ex.what() << std::endl;
-    }
+    std::cout << f1 << std::endl;
+    b1.signForm(f1); //TRUMP
+    std::cout << f1 << std::endl;
+
     std::cout << std::endl;
-    try{
-        std::cout << f2 << std::endl;
-        b2.signForm(f2);
-        std::cout << f2 << std::endl;
-    }
-    catch(std::exception& ex){
-        std::cout << ex.what() << std::endl;
-    }
+
+    std::cout << f2 << std::endl;
+    b2.signForm(f2); //PUTIN
+    std::cout << f2 << std::endl;
 
     std::cout << std::endl << "FORCE PUTIN TO SIGN" << std::endl;
     try{

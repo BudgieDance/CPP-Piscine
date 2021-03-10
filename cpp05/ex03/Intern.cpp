@@ -9,11 +9,6 @@ Intern::Intern(Intern const &src){
 
 Intern::~Intern(){}
 
-/*EXCEPTIONS*/
-const char* Intern::unknownFormException::what() const throw(){
-    return ("Form name was not recognized");
-}
-
 /*ACTION*/
 Form* makeShrubberyForm(std::string const target){
     Form* temp = new ShrubberyCreationForm(target);
@@ -43,7 +38,8 @@ Form* Intern::makeForm(std::string const name, std::string const target){
             return (forms[i](target));
         i++;
     }
-    throw Intern::unknownFormException();
+    std::cout << "Form name was not recognized" << std::endl;
+    return NULL;
 }
 
 /*OVERLOADS*/

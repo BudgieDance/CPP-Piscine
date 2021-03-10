@@ -72,12 +72,12 @@ std::ostream& operator<<(std::ostream& os, Form const &src){
     if (src.getIsSigned()){
         os << "Form '" << src.getName() << "' is signed" << std::endl <<
         "grade required to sign = " << src.getGradeToSign() << std::endl <<
-        "grade required to execure = " << src.getGradeToExec();
+        "grade required to execute = " << src.getGradeToExec();
     }
     else{
         os << "Form '" << src.getName() << "' is NOT signed" << std::endl <<
         "grade required to sign = " << src.getGradeToSign() << std::endl <<
-        "grade required to execure = " << src.getGradeToExec();
+        "grade required to execute = " << src.getGradeToExec();
     }
     return os;
 }
