@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <iterator>
 
 class Span{
 
@@ -18,8 +19,19 @@ class Span{
         ~Span();
 
         void addNumber(int number);
-        int shortestSpan() const;
-        int longestSpan() const;
+        void addNumber(std::vector<int>::iterator it1, std::vector<int>::iterator it2);
+        int shortestSpan();
+        int longestSpan();
+
+        class VectorFullException : public std::exception{
+            public:
+                virtual const char* what() const throw();
+        };
+
+        class FewNumbersException : public std::exception{
+            public:
+                virtual const char* what() const throw();
+        };
 
         Span& operator=(Span const& src);
 };

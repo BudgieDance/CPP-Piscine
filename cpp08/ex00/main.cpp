@@ -11,21 +11,21 @@ int main(){
     vec1.push_back(88);
     vec1.push_back(666);
     vec1.push_back(481516);
-
+    int n = 42;
     try{
-       std::vector<int>::iterator it = easyfind(vec1, 42);
-       std::cout << *it << std::endl;
+       std::vector<int>::iterator it = easyfind(vec1, n);
+       std::cout << *it << " - found" << std::endl;
     }
     catch(std::exception& ex){
-        std::cout << "given number is not in the container" << std::endl;
+        std::cout << n << " - not found" << std::endl;
     }
-
+    n = 333;
     try{
-       std::vector<int>::iterator it = easyfind(vec1, 333);
-       std::cout << *it << std::endl;
+       std::vector<int>::iterator it = easyfind(vec1, n);
+       std::cout << *it << " - found" << std::endl;
     }
     catch(std::exception& ex){
-        std::cout << "given number was not found" << std::endl;
+        std::cout << n << " - not found" << std::endl;
     }
 
     std::cout << std::endl << "TEST WITH LISTS" << std::endl;
@@ -35,28 +35,29 @@ int main(){
     list1.push_back(123455);
     list1.push_back(777);
     list1.push_back(234);
+    n = 777;
     try{
-        std::list<int>::iterator it_list = easyfind(list1, 777);
-        std::cout << *it_list << std::endl;
+        std::list<int>::iterator it_list = easyfind(list1, n);
+        std::cout << *it_list << " - found" << std::endl;
     } 
     catch(std::exception& ex){
-        std::cout << "given number was not found" << std::endl;
+        std::cout << n << " - not found" << std::endl;
     }
-
+    n = 778;
     try{
-        std::list<int>::iterator it_list = easyfind(list1, 778);
-        std::cout << *it_list << std::endl;
+        std::list<int>::iterator it_list = easyfind(list1, n);
+        std::cout << *it_list << " - found" << std::endl;
     } 
     catch(std::exception& ex){
-        std::cout << "given number was not found" << std::endl;
+        std::cout << n << " - not found" << std::endl;
     }
-
+    n = 21;
     try{
-        std::list<int>::iterator it_list = easyfind(list1, 21);
-        std::cout << *it_list << std::endl;
+        std::list<int>::iterator it_list = easyfind(list1, n);
+        std::cout << *it_list << " - found" << std::endl;
     } 
     catch(std::exception& ex){
-        std::cout << "given number was not found" << std::endl;
+        std::cout << n << " - not found" << std::endl;
     }
     return 0;
 }
